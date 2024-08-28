@@ -35,7 +35,7 @@ pipeline {
             steps {
                 sshPublisher(
                     publishers: [sshPublisherDesc(
-                        configName: 'your-server-config',
+                        configName: 'Crazybooks.in',
                         transfers: [sshTransfer(
                             cleanRemote: false,
                             excludes: '',
@@ -45,7 +45,7 @@ pipeline {
                             makeEmptyDirs: false,
                             noDefaultExcludes: false,
                             patternSeparator: '[, ]+',
-                            remoteDirectory: '/var/www/html/',
+                            remoteDirectory: '/home/admin/web/cryptopay.crazybooks.in/public_html',
                             remoteDirectorySDF: false,
                             removePrefix: 'build/',
                             sourceFiles: 'build/**/*'
