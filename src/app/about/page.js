@@ -1,4 +1,6 @@
-export default function Home() {
+import React from "react";
+
+const page = () => {
   return (
     <div
       style={{
@@ -11,8 +13,10 @@ export default function Home() {
       <h1
         style={{ fontSize: 30, fontWeight: "bold", textTransform: "uppercase" }}
       >
-        This is CICD Pipeline
+        This is About Page
       </h1>
     </div>
   );
-}
+};
+
+export default page;

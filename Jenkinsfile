@@ -39,7 +39,11 @@ pipeline {
                         transfers: [sshTransfer(
                             cleanRemote: false,
                             excludes: '',
-                            execCommand: 'rm -rf /var/www/html/* && mv /var/www/html/build/* /var/www/html/',
+                            execCommand: '''
+                                rm -rf /var/www/html/.next/*
+                                cp -r .next/* /var/www/html/
+                                cp -r public/* /var/www/html/public/
+                            ''',
                             execTimeout: 120000,
                             flatten: false,
                             makeEmptyDirs: false,
@@ -47,8 +51,8 @@ pipeline {
                             patternSeparator: '[, ]+',
                             remoteDirectory: '/home/admin/web/cryptopay.crazybooks.in/public_html',
                             remoteDirectorySDF: false,
-                            removePrefix: 'build/',
-                            sourceFiles: 'build/**/*'
+                            removePrefix: '',
+                            sourceFiles: '.next/**/*, public/**/*'
                         )],
                         usePromotionTimestamp: false,
                         useWorkspaceInPromotion: false,
