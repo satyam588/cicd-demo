@@ -49,7 +49,7 @@ pipeline {
                             makeEmptyDirs: false,
                             noDefaultExcludes: false,
                             patternSeparator: '[, ]+',
-                            remoteDirectory: '/home/admin/web/cryptopay.crazybooks.in/public_html',
+                            remoteDirectory: 'home/admin/web/cryptopay.crazybooks.in/public_html',
                             // remoteDirectory: '',
                             remoteDirectorySDF: false,
                             removePrefix: '.next/',
