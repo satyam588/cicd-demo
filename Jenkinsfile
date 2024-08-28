@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_HOME = tool name: 'NodeJS' // Ensure NodeJS is set up in Jenkins Global Tool Configuration
+        NODEJS_HOME = tool name: 'NodeJS-20' // Ensure NodeJS is set up in Jenkins Global Tool Configuration
         PATH = "${NODEJS_HOME}/bin:${env.PATH}"
     }
 
