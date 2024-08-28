@@ -51,8 +51,8 @@ pipeline {
                             patternSeparator: '[, ]+',
                             remoteDirectory: 'home/admin/web/cryptopay.crazybooks.in/public_html',
                             remoteDirectorySDF: false,
-                            removePrefix: '.next/, public/',
-                            sourceFiles: '/**/*, /**/*'
+                            removePrefix: '',
+                            sourceFiles: '.next/server/app/**/*, /**/*'
                         )],
                         usePromotionTimestamp: false,
                         useWorkspaceInPromotion: false,
