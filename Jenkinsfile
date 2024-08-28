@@ -39,11 +39,11 @@ pipeline {
                         transfers: [sshTransfer(
                             cleanRemote: false,
                             excludes: '',
-                            execCommand: '''
-                                rm -rf /var/www/html/.next/*
-                                cp -r .next/* /var/www/html/
-                                cp -r public/* /var/www/html/public/
-                            ''',
+                            // execCommand: '''
+                            //     rm -rf /var/www/html/.next/*
+                            //     cp -r .next/* /var/www/html/
+                            //     cp -r public/* /var/www/html/public/
+                            // ''',
                             execTimeout: 120000,
                             flatten: false,
                             makeEmptyDirs: false,
