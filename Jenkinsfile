@@ -52,7 +52,7 @@ pipeline {
                             remoteDirectory: 'home/admin/web/cryptopay.crazybooks.in/public_html',
                             remoteDirectorySDF: false,
                             removePrefix: '.next/, public/',
-                            sourceFiles: '.next/**/*, public/**/*'
+                            sourceFiles: '/**/*, /**/*'
                         )],
                         usePromotionTimestamp: false,
                         useWorkspaceInPromotion: false,
